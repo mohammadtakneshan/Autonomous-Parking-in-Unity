@@ -96,11 +96,6 @@ Examples of log files:
 - Implement additional RL algorithms for comparative studies.
 - Develop visualization tools for analyzing agent performance and decision-making.
 
-## Contributors
-
-- Mohammad T.
-- Team Members
-
 ## License
 
 This project is licensed under the MIT License.
