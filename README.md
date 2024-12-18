@@ -1,100 +1,80 @@
 # Reinforcement-Learning-Proj-2110
-## Overview
 
-This project demonstrates various reinforcement learning (RL) environments and training scenarios developed using Unity ML-Agents. The repository consists of training data, configurations, and environment implementations for RL tasks.
+The Unity project, as described, focuses on training agents to park a car using machine learning. The **ParkingLot.unity** and **ParkingLotAdvanced.unity** scenes represent two levels of complexity, leveraging Unity ML-Agents to implement reinforcement learning strategies for navigation and control.
 
-## Repository Structure
+---
 
-- **Basic Environment**
-    - Folder: `Basic`
-    - Description: A simple environment designed for basic RL tasks like movement and decision-making.
-- **BasicAvoidance Environment**
-    - Folder: `BasicAvoidance`
-    - Description: The agent learns to avoid obstacles or threats while navigating the environment.
-- **BasicPathFinding Environment**
-    - Folder: `BasicPathFinding`
-    - Description: The agent is trained to navigate a maze or grid to reach a target point.
-- **GridWorld Environment**
-    - Folder: `GridWorld`
-    - Description: A grid-based environment for navigation tasks, often used for experiments with discrete actions.
-- **Hallway Environment**
-    - Folder: `Hallway`
-    - Description: Sequential decision-making tasks where the agent navigates through hallways, learning directional choices.
-- **ParkingLot Environment**
-    - Folder: `ParkingLot`
-    - Description: A navigation and avoidance task where the agent learns to park or move vehicles.
-- **ParkingLotAdvanced Environment**
-    - Folder: `ParkingLotAdvanced`
-    - Description: A more complex version of the Parking Lot environment with advanced observation and decision tasks.
-- **PushBlock Environment**
-    - Folder: `PushBlock`
-    - Description: An object manipulation task where the agent pushes blocks to target locations.
-- **VisualHallway Environment**
-    - Folder: `VisualHallway`
-    - Description: Similar to the Hallway environment but with visual observation inputs.
-- **VisualPushBlock Environment**
-    - Folder: `VisualPushBlock`
-    - Description: The Push Block environment with a focus on visual observations.
+### **Description of Scene**
 
-## Key Files and Logs
 
-Each environment contains a `.json` log file capturing metrics during training, including:
+- **Purpose**: Demonstrates how a car (agent) learns to park in a more complex environment.
+- **Key Features**:
+  - More challenging environment, including tighter spaces and dynamic obstacles.
+  - Advanced reinforcement learning strategies are required to adapt to dynamic challenges.
 
-- `AgentSendState`: Time spent collecting observations and action masks.
-- `DecideAction`: Time used by the ML model to decide actions.
-- `AgentAct`: Time for the agent to execute an action.
-- Cumulative reward: Measures agent performance over time.
+---
 
-Examples of log files:
+### **Training Process**
 
-- `Basic_timers.json`
-- `BasicAvoidance_timers.json`
-- `BasicPathFinding_timers.json`
-- ...
+#### **1. Environment Setup**
+- Install Unity ML-Agents Toolkit and configure Unity Editor.
+- Load the scene (FILENAME).
 
-## Training Process
+#### **2. Training Configuration**
+- **Config File**: `/Assets/Config/SelfParking.yaml`
+  - Defines parameters like learning rate, reward signals, neural network architecture, etc.
+  - Example settings include:
+    - **Reward Signals**: Positive for successful parking, negative for collisions.
+    - **Behavior Type**: Continuous actions for precise control of the agent.
+    - **Observation Settings**: Includes position, velocity, and proximity to obstacles.
 
-1. **Environment Setup**:
-    - Install Unity ML-Agents and configure the Unity Editor.
-    - Load the desired environment (e.g., `Basic`, `PushBlock`).
-2. **Agent Training**:
-    - Run the environment and collect observations.
-    - Train the agent using RL algorithms such as PPO (Proximal Policy Optimization).
-3. **Evaluation**:
-    - Monitor training metrics (reward, episode length, etc.) using Unity's built-in tools or exported logs.
-    - Fine-tune hyperparameters and retrain for optimization.
-4. **Logging and Analysis**:
-    - Logs are automatically generated in `.json` format, containing detailed performance data.
+#### **3. Training and Evaluation**
+- Train the agent using reinforcement learning algorithms such as PPO (Proximal Policy Optimization).
+- Monitor metrics such as cumulative reward, time per action, and episode length.
+- Fine-tune hyperparameters and retrain for optimization.
 
-## Dependencies
+#### **4. Logging and Analysis**
+- Logs generated in `.json` format capture performance metrics:
+  - **AgentSendState**: Time collecting observations and action masks.
+  - **DecideAction**: Time spent by the ML model deciding actions.
+  - **AgentAct**: Time for the agent to execute actions.
+  - **Cumulative Reward**: Measures agent performance over time.
+- Example log files include `Basic_timers.json` and `ParkingLot_timers.json`.
 
-- **Unity ML-Agents**: Version 1.0.2
-- **Unity Editor**: Tested with versions 2018.4.17f1 and 2019.3.5f1
-- **Python**: Used for RL model training and log analysis.
+---
 
-## How to Use
+### **Key Files and Dependencies**
+1. **Config File**: `/Assets/Config/SelfParking.yaml`  
+   - Core configuration for training agents in parking scenarios.
+   
+2. **Log Files**: Captures detailed training metrics for analysis.
+   - Includes performance data on agent actions, rewards, and efficiency.
 
-1. Clone the repository:
-    
-    ```
-    git clone https://github.com/mohammadt-git/Reinforcement-Learning-Proj-2110.git
-    ```
-    
-2. Install Unity ML-Agents:
-    
-    ```
-    pip install mlagents
-    ```
-    
-3. Open the Unity project and load the desired scene (e.g., `PushBlock`, `GridWorld`).
-4. Train the agent by running the Unity simulation and observing performance metrics.
-5. Analyze the results using the `.json` log files.
+3. **Dependencies**:
+   - Unity ML-Agents Toolkit (v1.0.2)
+   - Python environment for RL model training and evaluation.
+   - Unity Editor (tested with versions 2018.4.17f1 and 2019.3.5f1).
 
-## Future Work
+---
 
-- Enhance complexity in environments (e.g., dynamic obstacles).
-- Implement additional RL algorithms for comparative studies.
-- Develop visualization tools for analyzing agent performance and decision-making.
+### **Additional Features**
+- **Dynamic Rewards**: Encourages agents to optimize their actions by providing context-sensitive feedback.
+- **Customization**: The project allows for environment scaling, enabling users to introduce more obstacles or adjust complexity.
+- **Visualization**: Materials and visual indicators help track agent success or failure during training.
+
+---
+
+### **Applications**
+- Understanding foundational concepts in reinforcement learning and agent-based control.
+- Developing intelligent navigation systems for autonomous vehicles.
+- Benchmarking RL algorithms in dynamic and constrained environments.
+
+---
+
+### **Future Enhancements**
+- Introduce real-time dynamic obstacles for added complexity.
+- Test and integrate advanced RL algorithms for comparative studies.
+- Develop intuitive visualization tools for performance analytics.
 
 ## License
 
