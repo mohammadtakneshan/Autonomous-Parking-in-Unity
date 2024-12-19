@@ -66,15 +66,8 @@ conda create -n unity python=3.9.7 -y
 
 conda activate unity
 
-conda config --add channels pytorch
-
 conda install pytorch torchvision -c pytorch
 
-conda install grpcio h5py -y
-
-pip install mlagents==0.30.0 -q
-
-pip install protobuf==3.20.0
 
 # Running ML Agents
 
@@ -85,6 +78,8 @@ Change CONFIG_FILE_NAME to the name of your configuration file and RUN_NAME to t
 Checking tensorboard logs:
 
 tensorboard --logdir results
+
+Open the website: http://localhost:####/
 
 # Concepts
 
