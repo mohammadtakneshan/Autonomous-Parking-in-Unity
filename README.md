@@ -35,7 +35,7 @@ The Unity project, as described, focuses on training agents to park a car using 
 
 ## **4. Training and Evaluation**
 
-- Train the agent using reinforcement learning algorithms such as PPO (Proximal Policy Optimization).
+- Train the agent using reinforcement learning algorithms such as PPO (Proximal Policy Optimization). More on PPO: https://medium.com/@danushidk507/ppo-algorithm-3b33195de14a
 - Monitor metrics such as cumulative reward, time per action, and episode length, shown in tensorboard.
 - Fine-tune hyperparameters and retrain for optimization.
 
