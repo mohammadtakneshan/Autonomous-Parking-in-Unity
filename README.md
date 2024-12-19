@@ -199,6 +199,38 @@ The **`SelfParking.yaml`** file is a configuration file for training the **CarBe
 6. **Performance**:
     - `threaded`: True – Enables threaded execution for faster training.
 
+## Scripts
+
+1. **CarObstacle.cs**:
+    - Manages different types of obstacles (e.g., barriers, trees) in the environment.
+    - Penalizes the agent when it collides with an obstacle.
+2. **CarSpots.cs**:
+    - Handles the setup and randomization of parked cars and car goals within a scene.
+    - Caches initial positions and rotations of parked cars for reset functionality.
+3. **Singleton.cs**:
+    - Implements a generic singleton pattern to ensure a single instance of a given class.
+4. **PlayerAgent.cs**:
+    - A core ML-Agent script that interacts with Unity ML-Agents.
+    - Collects observations, executes actions, and handles rewards and penalties based on the agent's performance.
+5. **TargetMoving.cs**:
+    - Manages the movement of the target object in the environment.
+    - Resets the target's position and handles penalties for boundary violations.
+6. **AgentAvoidance.cs**:
+    - Manages agent behaviors related to avoiding collisions with obstacles or other agents.
+    - Handles rewards or penalties for successful or failed avoidance.
+7. **BaseAgent.cs**:
+    - Serves as a base class for all agents, providing common functionality such as initialization, resetting, and basic observation collection.
+    - Facilitates extensibility for specific agent types like cars or players.
+8. **CarAgent.cs**:
+    - A specialized agent controlling the car's movement and decisions using ML-Agents.
+    - Implements observations (e.g., distance to the goal or obstacles) and actions (e.g., acceleration, steering).
+9. **CarController.cs**:
+    - Handles the car's physical movement, including acceleration, braking, and steering logic.
+    - Integrates with Unity’s physics system to simulate realistic car dynamics.
+10. **CarGoal.cs**:
+    - Defines the goal location or object that the agent must reach.
+    - Triggers rewards for the agent upon successful completion of the goal.
+
 ## Asset Files
 
 - **AssetStore**: Downloaded assets.
