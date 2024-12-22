@@ -2,6 +2,27 @@
 
 ## Table of Contents
 
+1. [Overview](#overview)
+2. [Description of Scene](#description-of-scene)
+3. [Training Process](#training-process)
+    - [Environment Setup](#1-environment-setup)
+    - [Training Configuration](#2-training-configuration)
+    - [Training Data](#3-training-data)
+    - [Training and Evaluation](#4-training-and-evaluation)
+    - [Logging and Analysis](#5-logging-and-analysis)
+4. [Key Files and Dependencies](#key-files-and-dependencies)
+5. [Installing the Dependencies](#installing-the-dependencies)
+6. [Running ML Agents](#running-ml-agents)
+7. [Concepts](#concepts)
+    - [Agent Observations](#1-agent-observations)
+    - [Agent Training](#3-agent-training)
+    - [Actions and Forces](#4-actions-and-forces)
+    - [Reward and Punishment System](#5-reward-and-punishment-system)
+8. [In-Depth File Explanation](#in-depth-file-explanation)
+9. [Resources](#resources)
+10. [Demo](#demo)
+
+
 ## Overview
 
 The Unity project focuses on training agents to park a car using machine learning. The **ParkingLotAdvanced.unity** scene demonstrates reinforcement learning strategies for navigation and control. This project highlights the application of foundational reinforcement learning concepts in real-world scenarios like autonomous vehicle navigation systems and dynamic environment modeling.
