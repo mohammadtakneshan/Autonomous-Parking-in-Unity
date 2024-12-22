@@ -1,7 +1,3 @@
-Autonomous-Parking in Unity
-
-# Overview
-
 The Unity project, as described, focuses on training agents to park a car using machine learning. The **ParkingLotAdvanced.unity** scene represent a level of complexity, leveraging Unity ML-Agents to implement reinforcement learning strategies for navigation and control.
 
 # **Description of Scene**
